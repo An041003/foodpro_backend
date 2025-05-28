@@ -4,5 +4,7 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: |
+      python manage.py collectstatic --noinput &&
       python manage.py migrate &&
       gunicorn foodpro_backend.wsgi --bind 0.0.0.0:$PORT
+
