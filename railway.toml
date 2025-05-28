@@ -3,5 +3,5 @@ builder = "nixpacks"
 root = "backend"
 buildCommand = "pip install -r requirements.txt"
 
-[start]
-command = "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn foodpro_backend.wsgi:application --bind 0.0.0.0:$PORT"
+[deploy]
+startCommand = "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn foodpro_backend.wsgi:application --bind 0.0.0.0:$PORT"
