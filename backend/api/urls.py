@@ -13,7 +13,6 @@ from .views import (
     AIGenerateMealView,
     AIDishSubstituteView,
     AIGenerateWorkoutView,
-    FrontendAppView,
 )
 from . import views
 
