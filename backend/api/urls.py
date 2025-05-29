@@ -15,9 +15,11 @@ from .views import (
     AIGenerateWorkoutView,
     FrontendAppView,
 )
+from . import views
+
 
 urlpatterns = [
-    path('', FrontendAppView.as_view()),
+    path('', views.index, name='index'),
     path("auth/register/", RegisterView.as_view()),
     path('profile/', ProfileView.as_view()),
     path("auth/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
